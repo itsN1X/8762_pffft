@@ -22,9 +22,9 @@ DOGECOIN: DFTEuCkJwX3Djh1EMT4XNK6a6NixxrMfhx
 ETH: 0xD0f79B71A8ffB7f70392630f8BFc900fcA27af42
 -->
 <head>
-<title>DoYourTip - DYT (Dynamite) | Information and Statistics</title>
-<meta name="description" content="itsN1X - DYT : Do Your Tip / DoYourTip (ERC20) Ethereum | EVM Contract : Market Capitalization , Live Price , Historical Data">
-<meta name="keywords" content="itsN1X , DYT , Do Your Tip , DoYourTip , ERC20 , Ethereum , EVM , Market Capitalization , Live , Price , Historical , Data">
+<title>PFFFT..!</title>
+<meta name="description" content="itsN1X - Port-folio frugal-feed tracker : PFFFT (pffft..!) lizard | Made for a client in 2020 seconds | Js/API/XHR | 9Xo - © itsN1X">
+<meta name="keywords" content="itsN1X , Portfolio , Tracker , Delta , CoinGecko , ERC20 , Ethereum , API , Market Capitalization , Live , Price , Historical , Data">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset=utf-8>
 <!--This stylesheet may be under a copyright by itsN1X.
@@ -333,8 +333,6 @@ roo=document.getElementById("rooter");
 shroo=document.getElementById("shooter");
 tm=document.getElementById("t");
 tu=document.getElementById("tu");
-beti=document.getElementById("b").value;
-enti=document.getElementById("e").value;
 tm.textContent=Date.now()/1000;
 tu.textContent=Date();
 
@@ -346,16 +344,18 @@ terr=tno%250000000;
 tep=tno-terr;
 
 
-t1.textContent=tep/1000-10000;
-t2.textContent=tep/1000+10000;
+t1.textContent=tep/1000-1000;
+t2.textContent=tep/1000+1000;
 
 // edit this array for new additional assets
-listie=["ethereum","tron","bitcoin"];
+listie=["ethereum","eos","bitcoin","stellar","tron","tether","electra","dogecoin","bitcoin-cash-sv","rapids","nix-platform","telos","bitcoin-cash","icon","hive","falcon-token"];
 
 
 function man() {
 
 listie.forEach(l => {
+beti=document.getElementById("b").value;
+enti=document.getElementById("e").value;
 w="https://api.coingecko.com/api/v3/coins/"+l+"/market_chart/range?vs_currency=btc&from="+beti+"&to="+enti;
 re=new XMLHttpRequest();
 re.open("GET",w, true);
@@ -378,7 +378,7 @@ shroo.appendChild(spa2);
 
 };
 
-re.send()
+re.send();
 } )
 spa1.innerHTML += "<hr>"; 
 spa2.innerHTML += "<hr>"; 
