@@ -1,0 +1,396 @@
+<html>
+<!--
+	Written by @itsN1X on day 8762
+	> github.com/itsN1X/8762_pffft
+	To tip me or to donate, visit:
+	>> https://9xo.github.io/R/teb
+	This Software is void of every
+	warranty, guarentee, assurance
+	or any liability of all kinds.
+	Please use this ware carefuly.
+	It was made for a Client based
+	over the Macau Special Region,
+	and has been deployed for them
+	over their private network. It
+	should be noted that sending a
+	request over internet is risky
+	& due diligence is obligatory.
+	To tip me or to donate, visit:
+	"https://9xo.github.io/R/teb".
+BITCOIN: 1TsNiXCQkPKaB6zfDQQXAwMBfe12ySoKa
+DOGECOIN: DFTEuCkJwX3Djh1EMT4XNK6a6NixxrMfhx
+ETH: 0xD0f79B71A8ffB7f70392630f8BFc900fcA27af42
+-->
+<head>
+<title>DoYourTip - DYT (Dynamite) | Information and Statistics</title>
+<meta name="description" content="itsN1X - DYT : Do Your Tip / DoYourTip (ERC20) Ethereum | EVM Contract : Market Capitalization , Live Price , Historical Data">
+<meta name="keywords" content="itsN1X , DYT , Do Your Tip , DoYourTip , ERC20 , Ethereum , EVM , Market Capitalization , Live , Price , Historical , Data">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+<!--This stylesheet may be under a copyright by itsN1X.
+© 2020 itsN1X | E. X. Information Technologies | 9Xo-->
+<style>
+.highlight {
+ color:#d0d0d0
+}
+.highlight table td {
+ padding:5px
+}
+.highlight table pre {
+ margin:0
+}
+.highlight .w {
+ color:#d0d0d0
+}
+.highlight .err {
+ color:#151515;
+ background-color:#ac4142
+}
+.highlight .c,.highlight .cd,.highlight .cm,.highlight .c1,.highlight .cs {
+ color:#888
+}
+.highlight .cp {
+ color:#f4bf75
+}
+.highlight .o,.highlight .ow {
+ color:#f4bf75
+}
+.highlight .p,.highlight .pi {
+ color:#d0d0d0
+}
+.highlight .gi {
+ color:#90a959
+}
+.highlight .gd {
+ color:#ac4142
+}
+.highlight .gh {
+ color:#6a9fb5;
+ font-weight:bold
+}
+.highlight .k,.highlight .kn,.highlight .kp,.highlight .kr,.highlight .kv {
+ color:#aa759f
+}
+.highlight .kc,.highlight .kt,.highlight .kd {
+ color:#d28445
+}
+.highlight .s,.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .sh,.highlight .sx,.highlight .s1 {
+ color:#90a959
+}
+.highlight .sr {
+ color:#75b5aa
+}
+.highlight .si,.highlight .se {
+ color:#8f5536
+}
+.highlight .nt,.highlight .nn,.highlight .nc,.highlight .no {
+ color:#f4bf75
+}
+.highlight .na {
+ color:#6a9fb5
+}
+.highlight .m,.highlight .mf,.highlight .mh,.highlight .mi,.highlight .il,.highlight .mo,.highlight .mb,.highlight .mx {
+ color:#90a959
+}
+.highlight .ss {
+ color:#90a959
+}
+body {
+ margin:0;
+ padding:0;
+ background:#151515;
+ color:#eaeaea;
+ font-size:16px;
+ line-height:1.5;
+ font-family:Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace
+}
+.container {
+ width:90%;
+ max-width:1000px;
+ margin:0 auto
+}
+section {
+ display:block;
+ margin:0 0 20px 0
+}
+h1,h2,h3,h4,h5,h6 {
+ margin:0 0 20px
+}
+li {
+ line-height:1.4
+}
+header {
+ background:rgba(0,0,0,0.1);
+ width:100%;
+ border-bottom:1px dashed #b5e853;
+ padding:20px 0;
+ margin:0 0 40px 0
+}
+header h1 {
+ font-size:30px;
+ line-height:1.5;
+ margin:0 0 0 -40px;
+ font-weight:bold;
+ font-family:Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+ color:#b5e853;
+ text-shadow:0 1px 1px rgba(0,0,0,0.1),0 0 5px rgba(181,232,83,0.1),0 0 10px rgba(181,232,83,0.1);
+ letter-spacing:-1px;
+ -webkit-font-smoothing:antialiased
+}
+header h1:before {
+ content:"./ ";
+ font-size:24px
+}
+header h2 {
+ font-size:18px;
+ font-weight:300;
+ color:#666
+}
+#downloads .btn {
+ display:inline-block;
+ text-align:center;
+ margin:0
+}
+#main_content {
+ width:100%;
+ -webkit-font-smoothing:antialiased
+}
+section img {
+ max-width:100%
+}
+h1,h2,h3,h4,h5,h6 {
+ font-weight:normal;
+ font-family:Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+ color:#b5e853;
+ letter-spacing:-0.03em;
+ text-shadow:0 1px 1px rgba(0,0,0,0.1),0 0 5px rgba(181,232,83,0.1),0 0 10px rgba(181,232,83,0.1);
+ text-align:center;
+}
+dt {
+ font-style:italic;
+ font-weight:bold
+}
+blockquote {
+ color:#aaa;
+ padding-left:10px;
+ border-left:1px dotted #666
+}
+pre {
+ background:rgba(0,0,0,0.9);
+ border:1px solid rgba(255,255,255,0.15);
+ padding:10px;
+ font-size:16px;
+ color:#b5e853;
+ border-radius:2px;
+ word-wrap:normal;
+ overflow:auto;
+ overflow-y:hidden
+}
+code.highlighter-rouge {
+ background:rgba(0,0,0,0.9);
+ border:1px solid rgba(255,255,255,0.15);
+ padding:0px 3px;
+ margin:0px -3px;
+ color:#aa759f;
+ border-radius:2px
+}
+hr {
+ height:0;
+ border:0;
+ border-bottom:1px dashed #b5e853;
+ color:#b5e853
+}
+.btn {
+ display:inline-block;
+ background:-webkit-linear-gradient(top, rgba(40,40,40,0.3), rgba(35,35,35,0.3) 50%, rgba(10,10,10,0.3) 50%, rgba(0,0,0,0.3));
+ padding:8px 18px;
+ border-radius:50px;
+ border:2px solid rgba(0,0,0,0.7);
+ border-bottom:2px solid rgba(0,0,0,0.7);
+ border-top:2px solid #000;
+ color:rgba(255,255,255,0.8);
+ font-family:Helvetica, Arial, sans-serif;
+ font-weight:bold;
+ font-size:13px;
+ text-decoration:none;
+ text-shadow:0 -1px 0 rgba(0,0,0,0.75);
+ box-shadow:inset 0 1px 0 rgba(255,255,255,0.05)
+}
+.btn:hover {
+ background:-webkit-linear-gradient(top, rgba(40,40,40,0.6), rgba(35,35,35,0.6) 50%, rgba(10,10,10,0.8) 50%, rgba(0,0,0,0.8))
+}
+.btn .icon {
+ display:inline-block;
+ width:16px;
+ height:16px;
+ margin:1px 8px 0 0;
+ float:left
+}
+a {
+ color:#63c0f5;
+ text-shadow:0 0 5px rgba(104,182,255,0.5);
+ text-decoration:none;
+}
+.cf:before,.cf:after {
+ content:"";
+ display:table
+}
+.cf:after {
+ clear:both
+}
+.cf {
+ zoom:1
+}
+header {
+ display:none
+}
+* {
+ box-sizing:border-box
+}
+::selection {
+ background:purple
+}
+::-moz-selection {
+ background:purple;
+ color:gold
+}
+table {
+ border-collapse:collapse;
+ margin:8% 0 0 25vw;
+ width:50vw;
+ border:1px solid #ddd;
+ font-size:18px
+}
+table th {
+ text-align:center;
+ padding:12px;
+ font-size:18px
+}
+table td {
+ padding:12px;
+ font-size:12px
+}
+table tr {
+ border-bottom:1px solid #ddd;
+ background-color:#020;
+}
+table tr:hover {
+ background-color:#070;
+}
+table tr.header {
+ background-color:#422121;
+ font-size:18px
+}
+table tr.header:hover {
+  background-color: #BB3333;
+}
+#t1 {
+ padding:12px;
+ text-align:left;
+ font-size:12px
+}
+#t2 {
+ padding:12px;
+ text-align:right;
+ font-size:12px
+}
+#rooter {
+ padding:12px;
+ text-align:right;
+ font-size:12px
+}
+#shooter {
+ padding:12px;
+ text-align:left;
+ font-size:12px
+}
+#myInput {
+ margin:8% 0 0 25vw;
+ width:50vw
+}
+<!--This stylesheet may be under a copyright by itsN1X.
+© 2020 itsN1X | E. X. Information Technologies | 9Xo-->
+</style>
+<h3>Times <span id="t"></span> now</h6>
+<h4>It's <span id="tu"></span>.</i><br><br>
+</h4>
+<h5><table><row><td id="t1">1</td><td id="t2">1</td></row></table></h5>
+<div align="center">
+<input type="text" id="b" placeholder="BETI"></input>
+<input type="text" id="e" placeholder="ENTI"></input></div>
+<h2><button type="button" id="b" onclick="man()">knowi</button></h2>
+<table>
+<row>
+<td><span id="rooter"></span></td>
+<td><span id="shooter"></span></td>
+</row>
+</table>
+
+<script>
+// get all datums
+
+roo=document.getElementById("rooter");
+shroo=document.getElementById("shooter");
+tm=document.getElementById("t");
+tu=document.getElementById("tu");
+beti=document.getElementById("b").value;
+enti=document.getElementById("e").value;
+tm.textContent=Date.now()/1000;
+tu.textContent=Date();
+
+t1=document.getElementById("t1");
+t2=document.getElementById("t2");
+
+tno=Date.now();
+terr=tno%250000000;
+tep=tno-terr;
+
+
+t1.textContent=tep/1000-10000;
+t2.textContent=tep/1000+10000;
+
+// edit this array for new additional assets
+listie=["ethereum","tron","bitcoin"];
+
+
+function man() {
+
+listie.forEach(l => {
+w="https://api.coingecko.com/api/v3/coins/"+l+"/market_chart/range?vs_currency=btc&from="+beti+"&to="+enti;
+re=new XMLHttpRequest();
+re.open("GET",w, true);
+re.onload = function() {
+var dd=JSON.parse(this.response);
+
+
+// put into list
+// list is a cell in a table
+// for highlight to copy
+
+spa1=document.createElement("p");
+spa2=document.createElement("p");
+spa1.textContent=(dd.prices[0][1]*1e8).toFixed(2);
+spa2.textContent=l;
+roo.appendChild(spa1);
+shroo.appendChild(spa2);
+// pick up selective
+
+
+};
+
+re.send()
+} )
+spa1.innerHTML += "<hr>"; 
+spa2.innerHTML += "<hr>"; 
+}
+</script>
+<br>
+<hr><hr><hr><hr>
+<h3>Thank Ü for ya time!</h3>
+<h5>> special thanks to the <a href="https://t.me/n1xus">folks @ N1XUS</a> for the push!</h5>
+<h6>> 2x sbecial thanks to - The CoinGecko!</h6>
+<div align=center>$ETHer :: 0xD0f79B71A8ffB7f70392630f8BFc900fcA27af42</div>
+<h5>Do visit <b><a href="https://9xo.github.io/R/teb">9xo/R</a></b> to giveaway kind♥</h5>
+<div align=center><font size=1><b>About:<a href="https://google.com/search?q=itsN1X">CREA10R</a> | Github:<a href="https://github.com/itsN1X">@itsN1X</a> :: twitter:<a href="https://twitter.com/itsN1X">@itsN1X</a></b></font></div>
+<hr><hr><hr><hr>
+</html>
