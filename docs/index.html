@@ -1,4 +1,4 @@
-<html>
+<html><meta charset="UTF-8">
 <!--
 	Written by @itsN1X on day 8762
 	> github.com/itsN1X/8762_pffft
@@ -26,7 +26,7 @@ ETH: 0xD0f79B71A8ffB7f70392630f8BFc900fcA27af42
 <meta name="description" content="itsN1X - Port-folio frugal-feed tracker : PFFFT (pffft..!) lizard | Made for a client in 2020 seconds | Js/API/XHR | 9Xo - © itsN1X">
 <meta name="keywords" content="itsN1X , Portfolio , Tracker , Delta , CoinGecko , ERC20 , Ethereum , API , Market Capitalization , Live , Price , Historical , Data">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset=utf-8>
+
 <!--This stylesheet may be under a copyright by itsN1X.
 © 2020 itsN1X | E. X. Information Technologies | 9Xo-->
 <style>
@@ -341,11 +341,11 @@ t2=document.getElementById("t2");
 
 tno=Date.now();
 terr=tno%250000000;
-tep=tno-terr;
+tep=(tno-terr)/1000;
 
 
-t1.textContent=tep/1000-1000;
-t2.textContent=tep/1000+1000;
+t1.textContent=tep-1000;
+t2.textContent=tep+1000;
 
 // edit this array for new additional assets
 listie=["ethereum","eos","bitcoin","stellar","tron","tether","electra","dogecoin","bitcoin-cash-sv","rapids","nix-platform","telos","bitcoin-cash","icon","hive","falcon-token"];
@@ -369,8 +369,25 @@ var dd=JSON.parse(this.response);
 
 spa1=document.createElement("p");
 spa2=document.createElement("p");
-spa1.textContent=(dd.prices[0][1]*1e8).toFixed(2);
-spa2.textContent=l;
+
+// get closest to "terr=tno%250000000;tep=(tno-terr)/1000;" i.e.: beti\enti
+
+for(k=0;k<dd.prices.length;k+=1)
+{
+    if((dd.prices[k][0]>tep*1000) && k==0)
+    {
+        spa1.textContent=(dd.prices[k][1]*1e8).toFixed(2);
+        spa2.textContent=l;
+        break;
+    }
+    if((dd.prices[k][0])>tep*1000)
+    {
+        spa1.textContent=(dd.prices[k-1][1]*1e8).toFixed(2);
+        spa2.textContent=l;
+        break;
+    }
+}
+
 roo.appendChild(spa1);
 shroo.appendChild(spa2);
 // pick up selective
@@ -380,8 +397,8 @@ shroo.appendChild(spa2);
 
 re.send();
 } )
-spa1.innerHTML += "<hr>"; 
-spa2.innerHTML += "<hr>"; 
+roo.innerHTML += "<hr>"; 
+shroo.innerHTML += "<hr>"; 
 }
 </script>
 <br>
