@@ -313,9 +313,7 @@ table tr.header:hover {
 </style>
 <h3>Times <span id="t"></span> now</h6>
 <h4>It's <span id="tu"></span>.</i><br><br>
-</h4>
-<h5><table><row><td id="t1">1</td><td id="t2">1</td></row></table></h5>
-<div align="center">
+</h4><div align="center">
 <input type="text" id="b" placeholder="BETI"></input>
 <input type="text" id="e" placeholder="ENTI"></input></div>
 <h2><button type="button" id="b" onclick="man()">knowi</button></h2>
@@ -344,12 +342,19 @@ terr=tno%250000000;
 tep=(tno-terr)/1000;
 
 
-t1.textContent=tep-1000;
-t2.textContent=tep+1000;
+t1=tep-2500;
+t2=tep+2500;
 
 // edit this array for new additional assets
 listie=["ethereum","eos","bitcoin","stellar","tron","tether","electra","dogecoin","bitcoin-cash-sv","rapids","nix-platform","telos","bitcoin-cash","icon","hive","falcon-token"];
 
+// experimental
+
+
+vbeti=document.getElementById("b");
+venti=document.getElementById("e");
+vbeti.value=t1;
+venti.value=t2;
 
 function man() {
 
@@ -370,17 +375,17 @@ var dd=JSON.parse(this.response);
 spa1=document.createElement("p");
 spa2=document.createElement("p");
 
-// get closest to "terr=tno%250000000;tep=(tno-terr)/1000;" i.e.: beti\enti
-
+// get closest to query i.e.: (beti+enti)/2
+tee=(Number(beti)+Number(enti))/2;
 for(k=0;k<dd.prices.length;k+=1)
 {
-    if((dd.prices[k][0]>tep*1000) && k==0)
+    if((dd.prices[k][0]>tee*1000) && k==0)
     {
         spa1.textContent=(dd.prices[k][1]*1e8).toFixed(2);
         spa2.textContent=l;
         break;
     }
-    if((dd.prices[k][0])>tep*1000)
+    if((dd.prices[k][0])>tee*1000)
     {
         spa1.textContent=(dd.prices[k-1][1]*1e8).toFixed(2);
         spa2.textContent=l;
