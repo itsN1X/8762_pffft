@@ -385,9 +385,15 @@ for(k=0;k<dd.prices.length;k+=1)
         spa2.textContent=l;
         break;
     }
-    if((dd.prices[k][0])>tee*1000)
+    else if((dd.prices[k][0])>tee*1000)
     {
         spa1.textContent=(dd.prices[k-1][1]*1e8).toFixed(2);
+        spa2.textContent=l;
+        break;
+    }
+    else
+    {
+        spa1.textContent=(dd.prices[dd.prices.length-1][1]*1e8).toFixed(2);
         spa2.textContent=l;
         break;
     }
